@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="vnu.uet.mobilecourse.assistant">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".view.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/DarkTheme"
+        android:usesCleartextTraffic="true"
+        android:windowSoftInputMode="adjustPan">
+        <service
+            android:name=".repository.firebase.chatnoti.MyFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+
+        </service>
+
+        <receiver
+            android:name=".alarm.receiver.ExamReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".alarm.receiver.TodoReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".alarm.receiver.SessionReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".alarm.receiver.SubmissionReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".view.LoginFirebaseActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="uet-assistant-d048c.firebaseapp.com"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.MyCoursesActivity"
+            android:label="@string/title_activity_my_courses"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".view.LoginActivity"
+            android:label="@string/login" />
+        <activity android:name=".view.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

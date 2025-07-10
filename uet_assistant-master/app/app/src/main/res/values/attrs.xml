@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MaxHeightNestedScrollView">
+        <attr name="maxHeight" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="EmptyView">
+        <attr name="textContent" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="AvatarView">
+        <attr name="borderWidth" format="dimension"/>
+        <attr name="showStatus" format="boolean"/>
+    </declare-styleable>
+
+    <attr name="squareButtonStyle" format="reference"/>
+
+</resources>

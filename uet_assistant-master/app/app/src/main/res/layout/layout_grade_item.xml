@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/list_item_background"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivThumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|start"
+        android:paddingHorizontal="@dimen/margin_x2"
+        android:tint="@color/primaryDark"
+        android:src="@drawable/ic_assignment_32dp" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/margin_x3"
+            android:paddingVertical="@dimen/margin_x2"
+            android:layout_gravity="center_vertical|start"
+            android:textSize="@dimen/font_size_item_title"
+            android:text="@string/title_loading" />
+
+        <TextView
+            android:id="@+id/tvGrade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/primary_button_background"
+            android:backgroundTint="@color/primary"
+            android:textSize="@dimen/font_size_caption"
+            android:paddingHorizontal="@dimen/margin"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="@dimen/margin_x2"
+            android:text="@string/title_loading" />
+
+</LinearLayout>

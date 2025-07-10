@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.profile.MyProfileFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        app:elevation="0dp"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            style="@style/Toolbar"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:elevation="0dp"
+            app:navigationIcon="@drawable/ic_arrow_back_24dp"
+            app:title="Hồ sơ cá nhân" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:paddingBottom="@dimen/margin_x3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profile_banner_height"
+                android:background="@color/primary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="@dimen/avatar_container_size"
+                android:layout_height="@dimen/avatar_container_size"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/background"
+                app:layout_constraintBottom_toBottomOf="@+id/avatarView"
+                app:layout_constraintEnd_toEndOf="@+id/avatarView"
+                app:layout_constraintStart_toStartOf="@+id/avatarView"
+                app:layout_constraintTop_toTopOf="@+id/avatarView" />
+
+            <vnu.uet.mobilecourse.assistant.view.component.AvatarView
+                android:id="@+id/avatarView"
+                android:layout_width="@dimen/big_img_avatar_size"
+                android:layout_height="@dimen/big_img_avatar_size"
+                app:layout_constraintBottom_toBottomOf="@+id/view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+<!--            <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                android:id="@+id/civAvatar"-->
+<!--                android:layout_width="@dimen/big_img_avatar_size"-->
+<!--                android:layout_height="@dimen/big_img_avatar_size"-->
+<!--                android:visibility="invisible"-->
+<!--                android:layout_marginTop="@dimen/margin_x6"-->
+<!--                android:background="@drawable/circle"-->
+<!--                android:backgroundTint="@color/white"-->
+<!--                android:src="@drawable/avatar"-->
+<!--                app:civ_border_color="@color/background"-->
+<!--                app:civ_border_width="4dp"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/view"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/view" />-->
+
+            <TextView
+                android:id="@+id/tvUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_x2"
+                android:text="@string/title_loading"
+                android:textSize="@dimen/font_size_large_title"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/avatarView" />
+
+            <TextView
+                android:id="@+id/tvUserId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_loading"
+                android:textSize="@dimen/font_size_page_title"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvUsername" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/sflNameAndId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_x2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/avatarView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/backgroundLight"
+                        android:textSize="@dimen/font_size_large_title" />
+
+                    <TextView
+                        android:layout_marginTop="@dimen/small_margin"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/backgroundLight"
+                        android:textSize="@dimen/font_size_page_title"/>
+
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <TextView
+                android:id="@+id/tvCommonTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_x2"
+                android:layout_marginTop="@dimen/margin_x4"
+                android:text="Thông tin chung"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/font_size_list_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvUserId" />
+
+            <LinearLayout
+                android:id="@+id/layoutDob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_x2"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCommonTitle">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|start"
+                    android:paddingHorizontal="12dp"
+                    android:src="@drawable/ic_cake_32dp"
+                    android:tint="@color/primaryDark" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/list_item_background"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/margin">
+
+                    <TextView
+                        style="@style/ListTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_birthday" />
+
+                    <TextView
+                        android:id="@+id/tvDoB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|start"
+                        android:text="@string/title_loading"
+                        android:textSize="@dimen/font_size_item_title" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutClass"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutDob">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|start"
+                    android:paddingHorizontal="12dp"
+                    android:src="@drawable/ic_school_32dp"
+                    android:tint="@color/primaryDark" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/list_item_background"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/margin">
+
+                    <TextView
+                        style="@style/ListTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_uet_class" />
+
+                    <TextView
+                        android:id="@+id/tvClass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|start"
+                        android:text="@string/title_loading"
+                        android:textSize="@dimen/font_size_item_title" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/sflDobAndClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_x2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCommonTitle">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/shimmer_profile_section" />
+
+                    <include layout="@layout/shimmer_profile_section" />
+
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <TextView
+                android:id="@+id/tvOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_x2"
+                android:layout_marginTop="@dimen/margin_x3"
+                android:text="Thao tác khác"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/font_size_list_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutClass" />
+
+            <vnu.uet.mobilecourse.assistant.view.component.SquareButton
+                android:id="@+id/btnChangeAvatar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thay ảnh đại diện"
+                android:layout_marginTop="@dimen/margin"
+                android:drawableEnd="@drawable/ic_image_32dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvOther" />
+
+            <vnu.uet.mobilecourse.assistant.view.component.SquareButton
+                android:id="@+id/btnSetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title_setting"
+                android:drawableEnd="@drawable/ic_settings_32dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnChangeAvatar"/>
+
+            <vnu.uet.mobilecourse.assistant.view.component.SquareButton
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title_logout"
+                android:drawableEnd="@drawable/ic_vertical_align_bottom_32dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnSetting"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

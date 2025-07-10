@@ -1,0 +1,99 @@
+<resources>
+    <string name="app_name">Trợ lý học tập Công nghệ</string>
+    <string name="short_introduce">Hỗ trợ theo dõi và quản lý học tập,\nnhận thông báo tức thì.</string>
+    <string name="access_courses">Truy cập khóa học</string>
+    <string name="background_light">Highlight background</string>
+    <string name="welcome">Xin chào!</string>
+    <string name="login_guideline">Hãy sử dụng tài khoản uetmail để đăng nhập.</string>
+    <string name="student_id">Mã số sinh viên</string>
+    <string name="password">Mật khẩu</string>
+    <string name="login">Đăng nhập</string>
+    <string name="title_activity_my_courses">MyCoursesActivity</string>
+    <string name="title_recently_courses">Khóa học mới truy cập</string>
+    <string name="title_all_courses">Tất cả khóa học</string>
+    <string name="title_my_courses">Khóa học</string>
+    <string name="title_chat">Trò chuyện</string>
+    <string name="title_notifications">Thông báo</string>
+    <string name="title_calendar">Lịch biểu</string>
+    <string name="title_profile">Hồ sơ</string>
+    <string name="card_course_desc">Thẻ khóa học</string>
+    <string name="desc_average_grade">Điểm số hiện tại của bạn</string>
+    <string name="tab_title_progress">Tiến độ</string>
+    <string name="tab_title_grade">Điểm</string>
+    <string name="tab_title_classmates">Bạn cùng lớp</string>
+
+    <string name="calendar_sunday_title">C.N</string>
+    <string name="calendar_monday_title">Th.2</string>
+    <string name="calendar_tuesday_title">Th.3</string>
+    <string name="calendar_wednesday_title">Th.4</string>
+    <string name="calendar_thursday_title">Th.5</string>
+    <string name="calendar_friday_title">Th.6</string>
+    <string name="calendar_saturday_title">Th.7</string>
+
+    <string name="course_code_error">Không tìm thấy mã môn học</string>
+
+    <string name="login_guideline_check_account">Kiểm tra thông tin tài khoản</string>
+    <string name="login_guideline_verify_mail">Bạn vui lòng kiểm tra hòm thư điện tử uetmail để xác thực tài khoản.</string>
+    <string name="login_guideline_verify_success">Xác thực tài khoản thành công.\nĐang truy cập khóa học…</string>
+    <string name="login_guideline_expired_code">Mã xác nhận đã hết hạn!</string>
+    <string name="login_guideline_retry_send_mail">Gửi lại mã xác nhận</string>
+    <string name="login_guideline_verifying">Đang xác thực tài khoản…</string>
+    <string name="material_description_title">Mô tả tài liệu</string>
+    <string name="material_attachment_title">Tệp đính kèm</string>
+    <string name="material_status_complete">Hoàn thành</string>
+    <string name="material_status_uncomplete">Chưa hoàn thành</string>
+    <string name="title_todo_lists">Danh sách công việc</string>
+
+    <string name="title_search_hint">Tìm kiếm</string>
+    <string name="title_uet_class">Lớp khóa học</string>
+    <string name="title_common_courses">Các khóa học chung</string>
+    <string name="title_birthday">Ngày sinh</string>
+    <string name="tab_title_general">Tổng quan</string>
+    <string name="title_schedule">Thời khóa biểu</string>
+    <string name="title_student_size">Sĩ số</string>
+    <string name="title_course_unit_number">Số tín chỉ</string>
+    <string name="title_course_code">Mã môn học</string>
+    <string name="title_course_title">Tên môn học</string>
+    <string name="fab_title_add_todo">Thêm công việc</string>
+
+    <string name="fab_title_add_list">Thêm danh sách</string>
+    <string name="title_loading">Đang tải…</string>
+
+    <string name="title_error">Lỗi</string>
+    <string name="title_error_no_connectivity">Không thể kết nối mạng</string>
+    <string name="title_error_unavailable_host">Không thể kết nối website môn học</string>
+
+    <string name="title_setting">Cài đặt</string>
+    <string name="title_logout">Đăng xuất</string>
+    <string name="title_material_no_attachment">Không có tệp đính kèm</string>
+    <string name="title_material_no_desc">Không có mô tả.</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_course_general_materials">Thông báo/Tài liệu chung</string>
+    <string name="material_modify_time_title">Chỉnh sửa lần cuối</string>
+    <string name="material_assignment_no_attempt_title">Không thể làm bài</string>
+    <string name="material_start_time_title">Thời gian bắt đầu</string>
+    <string name="material_deadline_title">Thời gian kết thúc</string>
+    <string name="material_limit_time_title">Thời gian làm bài</string>
+    <string name="title_course_enroll_error">Bạn chưa tham gia vào lớp học này\ntrên website môn học.</string>
+    <string name="title_calendar_empty_event">Không có hoạt động nào được ghi nhận.\nBạn có thể thêm công việc mới</string>
+    <string name="title_notification_empty">Bạn chưa nhận được thông báo nào!</string>
+    <string name="title_discussion_pinned">Được ghim</string>
+    <string name="title_discussion_follow">Theo dõi</string>
+    <string name="title_discussion_unfollow">Hủy theo dõi</string>
+    <string name="dot_delimiter">•</string>
+    <string name="title_chat_create_group">Tạo cuộc trò chuyện nhóm</string>
+    <string name="title_next">Tiếp</string>
+    <string name="title_chat_add_member">Thêm thành viên</string>
+    <string name="title_chat_set_room_title">Đặt tên nhóm mới</string>
+    <string name="hint_set_room_chat_title">Tên nhóm (bắt buộc)</string>
+
+    <string-array name="dayOfWeek">
+        <item>C.N</item>
+        <item>Th.2</item>
+        <item>Th.3</item>
+        <item>Th.4</item>
+        <item>Th.5</item>
+        <item>Th.6</item>
+        <item>Th.7</item>
+    </string-array>
+</resources>

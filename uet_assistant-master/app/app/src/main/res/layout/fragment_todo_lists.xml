@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".view.calendar.TodoListsFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/aplThumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_item_background"
+        app:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            style="@style/Toolbar"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            app:title="@string/title_todo_lists"
+            app:menu="@menu/todo_lists_toolbar_menu">
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTodoLists"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerRvTodoLists"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/shimmer_expandable_parent_item" />
+            <include layout="@layout/shimmer_expandable_parent_item" />
+            <include layout="@layout/shimmer_expandable_parent_item" />
+            <include layout="@layout/shimmer_expandable_parent_item" />
+            <include layout="@layout/shimmer_expandable_parent_item" />
+            <include layout="@layout/shimmer_expandable_parent_item" />
+            <include layout="@layout/shimmer_expandable_parent_item" />
+            <include layout="@layout/shimmer_expandable_parent_item" />
+            <include layout="@layout/shimmer_expandable_parent_item" />
+            <include layout="@layout/shimmer_expandable_parent_item" />
+            <include layout="@layout/shimmer_expandable_parent_item" />
+            <include layout="@layout/shimmer_expandable_parent_item" />
+            <include layout="@layout/shimmer_expandable_parent_item" />
+            <include layout="@layout/shimmer_expandable_parent_item" />
+            <include layout="@layout/shimmer_expandable_parent_item" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <vnu.uet.mobilecourse.assistant.view.component.EmptyView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/margin_x6"
+        android:visibility="gone"
+        app:textContent="Không có danh sách công việc nào.\nHãy tạo danh sách mới."
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/multiple_actions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginVertical="4dp"
+        android:layout_marginHorizontal="7dp"
+        app:fab_labelStyle="@style/menu_labels_style"
+        app:fab_addButtonColorNormal="@color/accent"
+        app:fab_addButtonColorPressed="@color/primary"
+        app:fab_addButtonPlusIconColor="@color/white">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAddTodo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/accent"
+            app:fab_title="@string/fab_title_add_todo"
+            app:fab_icon="@drawable/ic_note_add_24dp"
+            app:fab_colorPressed="@color/accent"/>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAddList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/accent"
+            app:fab_title="@string/fab_title_add_list"
+            app:fab_icon="@drawable/ic_playlist_add_24dp"
+            app:fab_colorPressed="@color/accent"/>
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

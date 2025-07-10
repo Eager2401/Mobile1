@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_item_background">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="@dimen/margin_x2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvTodoTitle"
+            style="@style/ListItemTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_x2"
+            android:text="@string/title_loading"
+            app:layout_constraintStart_toEndOf="@+id/cbDone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_x2"
+            android:background="@drawable/send_message_background"
+            android:backgroundTint="@color/primaryDark"
+            android:paddingHorizontal="@dimen/small_margin"
+            android:textSize="@dimen/font_size_caption"
+            android:text="@string/title_loading"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvDeadline"
+            app:layout_constraintTop_toTopOf="@+id/tvDeadline" />
+
+        <ImageView
+            android:id="@+id/ivAlarm"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:src="@drawable/ic_alarm_24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDeadline"
+            app:layout_constraintStart_toStartOf="@id/tvTodoTitle"
+            app:layout_constraintTop_toTopOf="@+id/tvDeadline" />
+
+        <TextView
+            android:id="@+id/tvDeadline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            android:textSize="@dimen/font_size_caption"
+            android:text="@string/title_loading"
+            app:layout_constraintStart_toEndOf="@+id/ivAlarm"
+            app:layout_constraintTop_toBottomOf="@+id/tvTodoTitle" />
+
+        <CheckBox
+            android:id="@+id/cbDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/primary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/layout_disable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="@color/dark_fade"/>
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:id="@+id/custom_calendar">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background" >
+
+        <ImageButton
+            android:id="@+id/ibtnPrevious"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back_24dp"
+            android:tint="@color/primaryDark"
+            android:background="@drawable/transparent_button_background"
+            android:padding="@dimen/margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tvCurrentMonth"
+            style="@style/ListItemTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/title_loading"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ibtnNext"
+            app:layout_constraintStart_toEndOf="@+id/ibtnPrevious"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/ibtnNext"
+            android:rotation="180"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back_24dp"
+            android:tint="@color/primaryDark"
+            android:background="@drawable/transparent_button_background"
+            android:padding="@dimen/margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/margin"
+        android:weightSum="7"
+        android:background="@color/background">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/calendar_sunday_title"
+            android:textSize="@dimen/font_size_list_title"
+            android:textAlignment="center"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/calendar_monday_title"
+            android:textSize="@dimen/font_size_list_title"
+            android:textAlignment="center"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:textSize="@dimen/font_size_list_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/calendar_tuesday_title"
+            android:textAlignment="center"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:textSize="@dimen/font_size_list_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/calendar_wednesday_title"
+            android:textAlignment="center"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:textSize="@dimen/font_size_list_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/calendar_thursday_title"
+            android:textAlignment="center"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:textSize="@dimen/font_size_list_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/calendar_friday_title"
+            android:textAlignment="center"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:textSize="@dimen/font_size_list_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/calendar_saturday_title"
+            android:textAlignment="center"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <vnu.uet.mobilecourse.assistant.view.component.CalendarDatesGridView
+        android:id="@+id/gvDates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</LinearLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".view.calendar.CalendarFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/aplThumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/col"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:collapsedTitleTextAppearance="@style/ToolbarTitleText"
+            app:expandedTitleTextAppearance="@style/ToolbarTitleText"
+            app:expandedTitleMarginStart="@dimen/margin_x2">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="?attr/actionBarSize">
+
+                <vnu.uet.mobilecourse.assistant.view.component.CustomCalendarView
+                    android:id="@+id/calendar_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/margin_x2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    style="@style/ToolbarTitleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@drawable/list_item_background"
+                    android:gravity="center_vertical"
+                    android:paddingEnd="0dp"
+                    android:paddingStart="@dimen/margin_x2"
+                    android:text="@string/title_calendar"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                style="@style/Toolbar"
+                android:layout_gravity="top"
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                app:title="@string/title_calendar"
+                app:menu="@menu/calendar_toolbar_menu">
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/sflEvents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/shimmer_todo_item" />
+
+            <include layout="@layout/shimmer_todo_item" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <vnu.uet.mobilecourse.assistant.view.component.EmptyView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/margin_x6"
+        app:textContent="@string/title_calendar_empty_event"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDailyTodoList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddTodo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/accent"
+        android:layout_margin="@dimen/margin_x2"
+        android:src="@drawable/ic_add_24dp"
+        android:tint="@color/white" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
